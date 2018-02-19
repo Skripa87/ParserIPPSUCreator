@@ -68,7 +68,7 @@ namespace ParserIPPSUCreator
                                 users.Where(u => u.Equals(user)).FirstOrDefault().MyMSZPs.Add(xlmsz.InnerText);
                             }
                         }
-                        users.Last().MyMSZPs.Sort();                    }
+                    }
                 }
             }
             return users;

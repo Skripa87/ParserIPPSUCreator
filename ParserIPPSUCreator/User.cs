@@ -15,6 +15,12 @@ namespace ParserIPPSUCreator
         public string Gender { get; set; }
         public string Birthsday { get; set; }
         public List<string> MyMSZPs { get; set; }
+        private Int64 ValueMSZPs()
+        {
+            Int64 result = 0;
+
+            return result;
+        }
         public User(string firstName, string secondName, string midleName, string gender, string birthsday)
         {
             FirstName = firstName;
@@ -42,5 +48,7 @@ namespace ParserIPPSUCreator
         {
             throw new NotImplementedException();
         }
+        
+        public 
     }
 }
