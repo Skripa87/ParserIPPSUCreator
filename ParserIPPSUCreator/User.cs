@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,24 @@ namespace ParserIPPSUCreator
             Gender = gender;
             Birthsday = birthsday;
             MyMSZPs = new List<string>();
+        }                
+        public override bool Equals(object other)
+        {
+            if(this.GetType() != other.GetType())
+            {
+                return false;
+            }
+            if ((this.FirstName == ((User)other).FirstName) && (this.MidleName == ((User)other).MidleName)
+            && (this.SecondName == ((User)other).SecondName) && (this.Gender == ((User)other).Gender) && (this.Birthsday == ((User)other).Birthsday))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            throw new NotImplementedException();
         }
     }
 }
