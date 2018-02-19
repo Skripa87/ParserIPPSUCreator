@@ -110,35 +110,9 @@ namespace ParserIPPSUCreator
                     users[j].MyMSZPs[i] = coderator.Where(c => c.Value == users[j].MyMSZPs[i]).Select(p => p.Key).FirstOrDefault().ToString();
                 }
                 users[j].MyMSZPs.Sort();
+                //users[j].CalcValueMSZPs();
             }
-            List<User> bufer = new List<User>();
-            foreach(var user in users)
-            {
-                bufer.Add(user);
-            }
-            List<List<User>> groups = new List<List<User>>();
-            int k1 = 0, k2 = 0;
-            do
-            {
-                int count = bufer[k1].MyMSZPs.Count;
-                List<User> group = new List<User>();
-                if (k1 + 1 >= bufer.Count)
-                {
-                    break;
-                }
-                k2 = k1 + 1;
-                do
-                {
-                    if (bufer[k2].MyMSZPs.Count == count)
-                    {
-                        group.Add(bufer[k2]);
-                        bufer.Remove(bufer[k2]);
-                    }
-                    k2++;
-                } while (k2 < bufer.Count);
-                groups.Add(group);
-                k1++;
-            } while (k1 < bufer.Count);
+            users.Sort();
         }
 
         private void button2_Click(object sender, EventArgs e)

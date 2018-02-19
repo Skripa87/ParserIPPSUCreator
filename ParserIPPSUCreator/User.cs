@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ParserIPPSUCreator
 {
-    public class User
+    public class User:IComparable
     {
         public string FirstName { get; set; }
         public string SecondName { get; set; }
@@ -15,11 +15,15 @@ namespace ParserIPPSUCreator
         public string Gender { get; set; }
         public string Birthsday { get; set; }
         public List<string> MyMSZPs { get; set; }
-        private Int64 ValueMSZPs()
+        
+        private string CalcValueMSZPs()
         {
-            Int64 result = 0;
-
-            return result;
+            string bufer = "";
+            foreach(var m in MyMSZPs)
+            {
+                bufer += m;
+            }
+            return bufer;
         }
         public User(string firstName, string secondName, string midleName, string gender, string birthsday)
         {
@@ -43,12 +47,12 @@ namespace ParserIPPSUCreator
             }
             return false;
         }
-
-        public override int GetHashCode()
+        public int CompareTo(object other)
         {
-            throw new NotImplementedException();
+            string a, b;
+            a = this.CalcValueMSZPs();
+            b = ((User)other).CalcValueMSZPs();
+            return b.CompareTo(a); 
         }
-        
-        public 
     }
 }
