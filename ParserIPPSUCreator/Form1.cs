@@ -68,7 +68,7 @@ namespace ParserIPPSUCreator
                                 users.Where(u => u.Equals(user)).FirstOrDefault().MyMSZPs.Add(xlmsz.InnerText);
                             }
                         }
-                    }
+                        users.Last().MyMSZPs.Sort();                    }
                 }
             }
             return users;
@@ -109,6 +109,7 @@ namespace ParserIPPSUCreator
                 {
                     users[j].MyMSZPs[i] = coderator.Where(c => c.Value == users[j].MyMSZPs[i]).Select(p => p.Key).FirstOrDefault().ToString();
                 }
+                users[j].MyMSZPs.Sort();
             }
             List<User> bufer = new List<User>();
             foreach(var user in users)
