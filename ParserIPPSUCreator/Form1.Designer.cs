@@ -36,13 +36,11 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 135);
+            this.button1.Location = new System.Drawing.Point(12, 98);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(418, 23);
             this.button1.TabIndex = 0;
@@ -52,7 +50,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 106);
+            this.button2.Location = new System.Drawing.Point(13, 69);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(168, 23);
             this.button2.TabIndex = 1;
@@ -62,7 +60,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(196, 108);
+            this.textBox1.Location = new System.Drawing.Point(196, 69);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(234, 20);
             this.textBox1.TabIndex = 2;
@@ -90,7 +88,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(13, 79);
+            this.button4.Location = new System.Drawing.Point(13, 42);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(417, 21);
             this.button4.TabIndex = 5;
@@ -98,30 +96,11 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(15, 45);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(165, 22);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Выбрать файл для ЛМСЗ ";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(196, 45);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(234, 20);
-            this.textBox3.TabIndex = 7;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 206);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button5);
+            this.ClientSize = new System.Drawing.Size(441, 130);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button3);
@@ -144,8 +123,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox3;
     }
 }
 
